@@ -1,7 +1,7 @@
 {
   "name": "criminal-ip",
   "label": "Criminal IP",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "Criminal IP provides cyber threat intelligence search engine through which you can scan IP, domain, urls.",
   "publisher": "Fortinet",
   "cs_approved": false,
@@ -108,6 +108,346 @@
           "required": true,
           "tooltip": "Specify the Domain to scan.",
           "description": "Specify the domain to retrieve its reputation information from Criminal IP."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "asset_search",
+      "title": "Asset Search",
+      "annotation": "asset_search",
+      "description": "Search for assets in Criminal IP database.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "query",
+          "title": "Query",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the search query.",
+          "description": "Specify the search query for assets in Criminal IP database."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_ip_report",
+      "title": "Get IP Report",
+      "annotation": "get_ip_report",
+      "description": "Get detailed report about an IP address from Criminal IP.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "ip",
+          "title": "IP Address",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the IP address to get report for.",
+          "description": "Specify the IP address to retrieve detailed report from Criminal IP."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_ip_report_summary",
+      "title": "Get IP Report Summary",
+      "annotation": "get_ip_report_summary",
+      "description": "Get summary report about an IP address from Criminal IP.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "ip",
+          "title": "IP Address",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the IP address to get report summary for.",
+          "description": "Specify the IP address to retrieve report summary from Criminal IP."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_ip_summary",
+      "title": "Get IP Summary",
+      "annotation": "get_ip_summary",
+      "description": "Get summary information about an IP address from Criminal IP.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "ip",
+          "title": "IP Address",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the IP address to get summary for.",
+          "description": "Specify the IP address to retrieve summary information from Criminal IP."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_ip_suspicious_info",
+      "title": "Get IP Suspicious Info",
+      "annotation": "get_ip_suspicious_info",
+      "description": "Get suspicious information about an IP address from Criminal IP.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "ip",
+          "title": "IP Address",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the IP address to get suspicious information for.",
+          "description": "Specify the IP address to retrieve suspicious information from Criminal IP using the /v2/feature/ip/suspicious-info endpoint."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "hosting_ip_information",
+      "title": "Hosting IP Information",
+      "annotation": "hosting_ip_information",
+      "description": "Get hosting information about an IP address from Criminal IP.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "ip",
+          "title": "IP Address",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the IP address to get hosting information for.",
+          "description": "Specify the IP address to retrieve hosting information from Criminal IP."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "ip_asn_history",
+      "title": "IP ASN History",
+      "annotation": "ip_asn_history",
+      "description": "Get ASN history for an IP address from Criminal IP.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "ip",
+          "title": "IP Address",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the IP address to get ASN history for.",
+          "description": "Specify the IP address to retrieve ASN history from Criminal IP using the /v1/asset/ip/report endpoint."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "is_safe_dns_server",
+      "title": "Is Safe DNS Server",
+      "annotation": "is_safe_dns_server",
+      "description": "Check if a DNS server is safe using Criminal IP.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "ip",
+          "title": "IP Address",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the DNS server IP address to check.",
+          "description": "Specify the DNS server IP address to check if it's safe using Criminal IP."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "privacy_threat",
+      "title": "Privacy Threat",
+      "annotation": "privacy_threat",
+      "description": "Get privacy threat information from Criminal IP.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "ip",
+          "title": "IP Address",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the IP address to get privacy threat information for.",
+          "description": "Specify the IP address to retrieve privacy threat information from Criminal IP using the /v1/feature/ip/privacy-threat endpoint."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "real_ip_detection",
+      "title": "Real IP Detection",
+      "annotation": "real_ip_detection",
+      "description": "Detect real IP address using Criminal IP.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "domain",
+          "title": "Domain",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the domain to detect real IP for.",
+          "description": "Specify the domain to detect real IP address using Criminal IP through the /v1/asset/ip/report endpoint."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "scan_domain",
+      "title": "Scan Domain",
+      "annotation": "scan_domain",
+      "description": "Scan a domain using Criminal IP.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "query",
+          "title": "Domain",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the domain to scan.",
+          "description": "Specify the domain to scan using Criminal IP."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "search_banners",
+      "title": "Search Banners",
+      "annotation": "search_banners",
+      "description": "Search for banners in Criminal IP database.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "query",
+          "title": "Query",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the search query for banners (required).",
+          "description": "Specify the search query for banners in Criminal IP database. This parameter is required."
+        },
+        {
+          "name": "offset",
+          "title": "Offset",
+          "type": "integer",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the offset for pagination (optional, default: 0).",
+          "description": "Returns 10 data entries per call. Input must be a multiple of 10."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "vpn_ip_status",
+      "title": "VPN IP Status",
+      "annotation": "vpn_ip_status",
+      "description": "Get VPN status of an IP address from Criminal IP.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "ip",
+          "title": "IP Address",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the IP address to get VPN status for.",
+          "description": "Specify the IP address to retrieve VPN status from Criminal IP."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_ip_malicious_info",
+      "title": "Get IP Malicious Info",
+      "annotation": "get_ip_malicious_info",
+      "description": "Get malicious information about an IP address from Criminal IP.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "ip",
+          "title": "IP Address",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the IP address to get malicious information for.",
+          "description": "Specify the IP address to retrieve malicious information from Criminal IP."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_domain_reports",
+      "title": "Get Domain Reports",
+      "annotation": "get_domain_reports",
+      "description": "Get domain reports from Criminal IP.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "domain",
+          "title": "Domain",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the domain to get reports for.",
+          "description": "Specify the domain to retrieve reports from Criminal IP."
         }
       ],
       "output_schema": {}
